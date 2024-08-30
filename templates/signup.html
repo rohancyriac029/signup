@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='logincss.css') }}">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+    </style>
+</head>
+<body>
+
+<div class="container" id="container">
+    <div class="form-container sign-in">
+        <!-- Signup Form -->
+        <form action="/signup" method="POST" id="signup-form">
+            <h2>Signup</h2>
+            <input type="text" name="name" placeholder="Full Name" required />
+            <input type="text" name="username" placeholder="Username (e.g., user@domain.com)" required />
+            <input type="password" name="password" placeholder="Password" required />
+            <input type="text" name="address" placeholder="Address" required />
+            <label for="profession">Choose your profession</label>
+            <br/>
+            <select id="profession" name="profession" required>
+                <option value="Doctor">Doctor</option>
+                <option value="Pharma">Pharma</option>
+                <option value="Engineer">Engineer</option>
+                <option value="Teacher">Teacher</option>
+            </select>
+            <br/>
+            <button type="submit">Signup</button>
+        </form>
+    </div>
+
+    <div class="toggle-container">
+        <div class="toggle">
+            <div class="toggle-panel toggle-left">
+                <h2>Already a Patient?</h2>
+                <p>If you have an account, please login here</p>
+                <button class="hidden" id="signInButton">Patient Login</button>
+            </div>
+            <div class="toggle-panel toggle-right">
+                <h2>Already a Doctor?</h2>
+                <p>If you have an account, please login here</p>
+                <button class="hidden" id="signUpButton">sign in</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // JavaScript to handle form toggling and redirection
+    document.getElementById('signInButton').addEventListener('click', function() {
+        window.location.href = 'login.html'; // Redirect to the login page
+    });
+</script>
+</body>
+</html>
