@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointments</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='appointments.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar (Common across all pages) -->
+        <aside>
+            <div class="toggle">
+                <div class="logo">
+                    <img src="doctor-logo.png" alt="Doctor Logo">
+                    <h2>Dr. Smith</h2>
+                </div>
+                <span id="close-btn" class="close">&times;</span>
+            </div>
+            <div class="sidebar">
+                <a href="doctor.html" ><span>&#127968;</span> Dashboard</a>
+                <a href="appointments.html" class="active"><span>&#128197;</span> Appointments</a>
+                <a href="patients.html"><span>&#128203;</span> Patients</a>
+                <a href="login.html"><span>&#128274;</span> Logout</a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main>
+            <h1>Appointments</h1>
+            <section class="recent-orders">
+                <h2>Upcoming Appointments</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Patient Name</th>
+                            <th>Appointment Time</th>
+                            <th>Status</th>
+                            <th>Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>John Doe</td>
+                            <td>10:00 AM</td>
+                            <td class="primary">Confirmed</td>
+                            <td class="primary"><a href="#">View</a></td>
+                        </tr>
+                        <tr>
+                            <td>Jane Smith</td>
+                            <td>11:30 AM</td>
+                            <td class="warning">Pending</td>
+                            <td class="primary"><a href="#">View</a></td>
+                        </tr>
+                        <tr>
+                            <td>Michael Johnson</td>
+                            <td>02:00 PM</td>
+                            <td class="danger">Cancelled</td>
+                            <td class="primary"><a href="#">View</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+
+        <!-- Right Section (Common across all pages) -->
+        <section class="right-section">
+            <div class="nav">
+                <button id="menu-btn"><span>&#9776;</span></button>
+                <div class="dark-mode">
+                    <span class="active">&#9728;</span>
+                    <span>&#9790;</span>
+                </div>
+                <div class="profile">
+                    <div class="profile-photo">
+                        <img src="doctor-photo.jpg" alt="Doctor Photo">
+                    </div>
+                    <div class="info">
+                        <h3>Dr. John Smith</h3>
+                        <small>General Practitioner</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="user-profile">
+                <img src="doctor-profile.jpg" alt="Doctor Profile">
+                <h2>Dr. John Smith</h2>
+                <p class="text-muted">"Committed to providing the best patient care."</p>
+            </div>
+
+            <div class="reminders">
+                <div class="header">
+                    <h2>Reminders</h2>
+                    <span>&#128276;</span>
+                </div>
+                <div class="notification">
+                    <div class="icon">&#128197;</div>
+                    <div class="content">
+                        <p>Follow up with Jane Smith</p>
+                        <span class="text-muted">Today, 3:00 PM</span>
+                    </div>
+                </div>
+                <div class="notification deactive">
+                    <div class="icon">&#128197;</div>
+                    <div class="content">
+                        <p>Review Michael Johnson's lab results</p>
+                        <span class="text-muted">Tomorrow, 9:00 AM</span>
+                    </div>
+                </div>
+                <div class="add-reminder">
+                    <div>
+                        <span>&#43;</span> Add New Reminder
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

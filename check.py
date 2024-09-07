@@ -9,9 +9,19 @@ def is_table_empty(table_name):
     query = f"SELECT COUNT(*) FROM {table_name}"
     
     try:
+        # Execute the count query
         c.execute(query)
         count = c.fetchone()[0]  # Fetch the result of the count query
         
+        # Query to select all rows from the table
+        c.execute(f"SELECT * FROM {table_name}")
+        rows = c.fetchall()
+        
+        # Print all rows
+        for row in rows:
+            print(row)
+        
+        # Check if the table is empty or not
         if count == 0:
             print(f"The table '{table_name}' is empty.")
         else:

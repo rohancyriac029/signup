@@ -15,7 +15,7 @@
 <div class="container" id="container">
     <div class="form-container sign-in">
         <!-- Signup Form -->
-        <form action="/signup" method="POST" id="signup-form">
+        <form action="http://127.0.0.1:5000/login" method="POST" id="signup-form">
             <h2>Signup</h2>
             <input type="text" name="name" placeholder="Full Name" required />
             <input type="text" name="username" placeholder="Username (e.g., user@domain.com)" required />
@@ -36,25 +36,26 @@
 
     <div class="toggle-container">
         <div class="toggle">
-            <div class="toggle-panel toggle-left">
-                <h2>Already a Patient?</h2>
-                <p>If you have an account, please login here</p>
-                <button class="hidden" id="signInButton">Patient Login</button>
-            </div>
             <div class="toggle-panel toggle-right">
-                <h2>Already a Doctor?</h2>
-                <p>If you have an account, please login here</p>
-                <button class="hidden" id="signUpButton">sign in</button>
+                <h1>Hello, Friend!</h1>
+                <p>Register with your personal details to use all of the site's features</p>
+                <button class="hidden" id="registerButton">Sign in</button>
             </div>
         </div>
     </div>
 </div>
 
 <script>
-    // JavaScript to handle form toggling and redirection
-    document.getElementById('signInButton').addEventListener('click', function() {
-        window.location.href = 'login.html'; // Redirect to the login page
+    document.getElementById('registerButton').addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent default form submission
+        window.location.href = 'http://127.0.0.1:5000/login'; // Redirect to the signup page
     });
+
+    document.getElementById('signup-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent default form submission
+        window.location.href = 'http://127.0.0.1:5000/login'; // Redirect to the doctor dashboard page
+    });
+</script>
 </script>
 </body>
 </html>

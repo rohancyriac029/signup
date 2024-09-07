@@ -1,0 +1,165 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(2, 99, 172, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #0664c3;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+.primary {
+    color: #007bff;
+    cursor: pointer;
+}
+
+.primary:hover {
+    text-decoration: underline;
+}
+
+.status-warning {
+    color: #ffc107;
+}
+
+.status-danger {
+    color: #dc3545;
+}
+
+.status-primary {
+    color: #28a745;
+}
+/* Sidebar and container styling */
+
+.container {
+    display: flex;
+}
+
+aside {
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+    height: 100vh;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.toggle .logo {
+    display: flex;
+    align-items: center;
+}
+
+.toggle .logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.sidebar {
+    margin-top: 20px;
+}
+
+.sidebar a {
+    display: block;
+    color: #fff;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.sidebar a:hover, .sidebar a.active {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+#close-btn {
+    display: none;
+    cursor: pointer;
+}
+
+main {
+    flex-grow: 1;
+    padding: 20px;
+}
+/* Sidebar and container styling */
+
+.container {
+    display: flex;
+}
+
+aside {
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+    height: 100vh;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(1, 121, 185, 0.1);
+}
+
+.toggle .logo {
+    display: flex;
+    align-items: center;
+}
+
+.toggle .logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.sidebar {
+    margin-top: 20px;
+}
+
+.sidebar a {
+    display: block;
+    color: #fff;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.sidebar a:hover, .sidebar a.active {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+#close-btn {
+    display: none;
+    cursor: pointer;
+}
+
+main {
+    flex-grow: 1;
+    padding: 20px;
+}
